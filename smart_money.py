@@ -631,7 +631,6 @@ class SmartMoney:
         return round(np.mean(df['high'] - df['low']))        
 
     # Get support zones
-    # A candle has to be lower than (?) candles before it and lower than (?) candles after it to qualify as a support
     def _get_supports(self, df: pd.DataFrame) -> pd.DataFrame:
         if len(df) < 1:
             return df
@@ -644,7 +643,6 @@ class SmartMoney:
         return df
 
     # Get resistances zones
-    # A candle has to be greater than (?) candles before it and greater than (?) candles after it to qualify as a support
     def _get_resistances(self, df: pd.DataFrame) -> pd.DataFrame:
         if len(df) < 1:
             return df
